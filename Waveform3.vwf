@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Conversor_Sinal_Mag -c Conversor_Sinal_Mag --vector_source="C:/Users/voa3/ULA-SD/Waveform2.vwf" --testbench_file="C:/Users/voa3/ULA-SD/simulation/qsim/Waveform2.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Conversor_Sinal_Mag -c Conversor_Sinal_Mag --vector_source="C:/Users/voa3/ULA-SD/Waveform2.vwf" --testbench_file="C:/Users/voa3/ULA-SD/simulation/qsim/Waveform2.vwf.vt"</ttestbench_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Conversor_Sinal_Mag -c Conversor_Sinal_Mag --vector_source="C:/Users/voa3/ULA-SD/Waveform3.vwf" --testbench_file="C:/Users/voa3/ULA-SD/simulation/qsim/Waveform3.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Conversor_Sinal_Mag -c Conversor_Sinal_Mag --vector_source="C:/Users/voa3/ULA-SD/Waveform3.vwf" --testbench_file="C:/Users/voa3/ULA-SD/simulation/qsim/Waveform3.vwf.vt"</ttestbench_cmd>
 <fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/voa3/ULA-SD/simulation/qsim/" Conversor_Sinal_Mag -c Conversor_Sinal_Mag</fnetlist_cmd>
 <tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/voa3/ULA-SD/simulation/qsim/" Conversor_Sinal_Mag -c Conversor_Sinal_Mag</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work Conversor_Sinal_Mag.vo
-vlog -work work Waveform2.vwf.vt
-vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.complemento_vlg_vec_tst
+vlog -work work Waveform3.vwf.vt
+vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.comp_magnitude_4bits_vlg_vec_tst
 vcd file -direction Conversor_Sinal_Mag.msim.vcd
-vcd add -internal complemento_vlg_vec_tst/*
-vcd add -internal complemento_vlg_vec_tst/i1/*
+vcd add -internal comp_magnitude_4bits_vlg_vec_tst/*
+vcd add -internal comp_magnitude_4bits_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -24,11 +24,11 @@ quit -f
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vlog -work work Conversor_Sinal_Mag.vo
-vlog -work work Waveform2.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.complemento_vlg_vec_tst
+vlog -work work Waveform3.vwf.vt
+vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.comp_magnitude_4bits_vlg_vec_tst
 vcd file -direction Conversor_Sinal_Mag.msim.vcd
-vcd add -internal complemento_vlg_vec_tst/*
-vcd add -internal complemento_vlg_vec_tst/i1/*
+vcd add -internal comp_magnitude_4bits_vlg_vec_tst/*
+vcd add -internal comp_magnitude_4bits_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -76,6 +76,46 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
+SIGNAL("A0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("A1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("A2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("A3")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
 SIGNAL("B0")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -116,17 +156,7 @@ SIGNAL("B3")
 	PARENT = "";
 }
 
-SIGNAL("B4")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("F0")
+SIGNAL("M_eq")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -136,7 +166,7 @@ SIGNAL("F0")
 	PARENT = "";
 }
 
-SIGNAL("F1")
+SIGNAL("M_maior")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -146,7 +176,7 @@ SIGNAL("F1")
 	PARENT = "";
 }
 
-SIGNAL("F2")
+SIGNAL("M_menor")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -156,44 +186,60 @@ SIGNAL("F2")
 	PARENT = "";
 }
 
-SIGNAL("F3")
+GROUP("A_word")
 {
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("F4")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("F5")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-GROUP("F_result")
-{
-	MEMBERS = "F5", "F4", "F3", "F2", "F1", "F0";
+	MEMBERS = "A3", "A1", "A2", "A0";
 }
 
 GROUP("B_word")
 {
-	MEMBERS = "B4", "B3", "B2", "B1", "B0";
+	MEMBERS = "B3", "B2", "B1", "B0";
+}
+
+TRANSITION_LIST("A0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 680.0;
+	}
+}
+
+TRANSITION_LIST("A1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 680.0;
+	}
+}
+
+TRANSITION_LIST("A2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 680.0;
+	}
+}
+
+TRANSITION_LIST("A3")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 680.0;
+	}
 }
 
 TRANSITION_LIST("B0")
@@ -201,7 +247,9 @@ TRANSITION_LIST("B0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 760.0;
 	}
 }
 
@@ -210,7 +258,9 @@ TRANSITION_LIST("B1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 680.0;
 	}
 }
 
@@ -219,7 +269,9 @@ TRANSITION_LIST("B2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 680.0;
 	}
 }
 
@@ -228,20 +280,13 @@ TRANSITION_LIST("B3")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 760.0;
 	}
 }
 
-TRANSITION_LIST("B4")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("F0")
+TRANSITION_LIST("M_eq")
 {
 	NODE
 	{
@@ -250,7 +295,7 @@ TRANSITION_LIST("F0")
 	}
 }
 
-TRANSITION_LIST("F1")
+TRANSITION_LIST("M_maior")
 {
 	NODE
 	{
@@ -259,34 +304,7 @@ TRANSITION_LIST("F1")
 	}
 }
 
-TRANSITION_LIST("F2")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("F3")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("F4")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("F5")
+TRANSITION_LIST("M_menor")
 {
 	NODE
 	{
@@ -297,17 +315,17 @@ TRANSITION_LIST("F5")
 
 DISPLAY_LINE
 {
-	CHANNEL = "B_word";
+	CHANNEL = "A_word";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
-	CHILDREN = 1, 2, 3, 4, 5;
+	CHILDREN = 1, 2, 3, 4;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "B4";
+	CHANNEL = "A3";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -317,7 +335,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "B3";
+	CHANNEL = "A1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -327,7 +345,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "B2";
+	CHANNEL = "A2";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -337,7 +355,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "B1";
+	CHANNEL = "A0";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -347,82 +365,79 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "B0";
+	CHANNEL = "B_word";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 1;
-	PARENT = 0;
+	TREE_LEVEL = 0;
+	CHILDREN = 6, 7, 8, 9;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "F_result";
+	CHANNEL = "B3";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
-	TREE_LEVEL = 0;
-	CHILDREN = 7, 8, 9, 10, 11, 12;
+	TREE_LEVEL = 1;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "F5";
+	CHANNEL = "B2";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
-	PARENT = 6;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "F4";
+	CHANNEL = "B1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
-	PARENT = 6;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "F3";
+	CHANNEL = "B0";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
-	PARENT = 6;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "F2";
+	CHANNEL = "M_eq";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
-	TREE_LEVEL = 1;
-	PARENT = 6;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "F1";
+	CHANNEL = "M_maior";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 11;
-	TREE_LEVEL = 1;
-	PARENT = 6;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "F0";
+	CHANNEL = "M_menor";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 12;
-	TREE_LEVEL = 1;
-	PARENT = 6;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR
