@@ -97,15 +97,15 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 136 32)
 		(output)
-		(text "out_menor" (rect 0 0 63 19)(font "Intel Clear" (font_size 8)))
-		(text "out_menor" (rect 52 27 115 46)(font "Intel Clear" (font_size 8)))
+		(text "out_maior" (rect 0 0 60 19)(font "Intel Clear" (font_size 8)))
+		(text "out_maior" (rect 55 27 115 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 136 32)(pt 120 32))
 	)
 	(port
 		(pt 136 48)
 		(output)
-		(text "out_maior" (rect 0 0 60 19)(font "Intel Clear" (font_size 8)))
-		(text "out_maior" (rect 55 43 115 62)(font "Intel Clear" (font_size 8)))
+		(text "out_menor" (rect 0 0 63 19)(font "Intel Clear" (font_size 8)))
+		(text "out_menor" (rect 52 43 115 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 136 48)(pt 120 48))
 	)
 	(port
