@@ -1,0 +1,146 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+# Date created = 13:02:20  April 23, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		geral_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY somador_ula_completo
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:02:19  APRIL 23, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_location_assignment PIN_AB28 -to A0
+set_location_assignment PIN_G19 -to A0L
+set_location_assignment PIN_AC28 -to A1
+set_location_assignment PIN_F19 -to A1L
+set_location_assignment PIN_AC27 -to A2
+set_location_assignment PIN_E19 -to A2L
+set_location_assignment PIN_AD27 -to A3
+set_location_assignment PIN_F21 -to A3L
+set_location_assignment PIN_AB27 -to A4
+set_location_assignment PIN_F18 -to A4L
+set_location_assignment PIN_AC26 -to B0
+set_location_assignment PIN_E18 -to B0L
+set_location_assignment PIN_AD26 -to B1
+set_location_assignment PIN_J19 -to B1L
+set_location_assignment PIN_AB26 -to B2
+set_location_assignment PIN_H19 -to B2L
+set_location_assignment PIN_AC25 -to B3
+set_location_assignment PIN_J17 -to B3L
+set_location_assignment PIN_AB25 -to B4
+set_location_assignment PIN_G17 -to B4L
+set_location_assignment PIN_E21 -to F0LED
+set_location_assignment PIN_E22 -to F1LED
+set_location_assignment PIN_E25 -to F2LED
+set_location_assignment PIN_E24 -to F3LED
+set_location_assignment PIN_H21 -to F4LED
+set_location_assignment PIN_G20 -to F5LED
+set_location_assignment PIN_G18 -to HEX00
+set_location_assignment PIN_AC24 -to S0
+set_location_assignment PIN_H16 -to S0L
+set_location_assignment PIN_AB24 -to S1
+set_location_assignment PIN_J16 -to S1L
+set_location_assignment PIN_AB23 -to S2
+set_location_assignment PIN_H17 -to S2L
+set_location_assignment PIN_H15 -to status
+set_location_assignment PIN_F22 -to HEX01
+set_location_assignment PIN_E17 -to HEX02
+set_location_assignment PIN_L26 -to HEX03
+set_location_assignment PIN_L25 -to HEX04
+set_location_assignment PIN_J22 -to HEX05
+set_location_assignment PIN_H22 -to HEX06
+set_location_assignment PIN_M24 -to HEX10
+set_location_assignment PIN_Y22 -to HEX11
+set_location_assignment PIN_W21 -to HEX12
+set_location_assignment PIN_W22 -to HEX13
+set_location_assignment PIN_W25 -to HEX14
+set_location_assignment PIN_U23 -to HEX15
+set_location_assignment PIN_U24 -to HEX16
+set_location_assignment PIN_AB19 -to HEX00A
+set_location_assignment PIN_AA19 -to HEX01A
+set_location_assignment PIN_AG21 -to HEX02A
+set_location_assignment PIN_AH21 -to HEX03A
+set_location_assignment PIN_AE19 -to HEX04A
+set_location_assignment PIN_AF19 -to HEX05A
+set_location_assignment PIN_AE18 -to HEX06A
+set_location_assignment PIN_AD18 -to HEX10A
+set_location_assignment PIN_AC18 -to HEX11A
+set_location_assignment PIN_AB18 -to HEX12A
+set_location_assignment PIN_AH19 -to HEX13A
+set_location_assignment PIN_AG19 -to HEX14A
+set_location_assignment PIN_AF18 -to HEX15A
+set_location_assignment PIN_AH18 -to HEX16A
+set_location_assignment PIN_AA17 -to HEX00B
+set_location_assignment PIN_AB16 -to HEX01B
+set_location_assignment PIN_AA16 -to HEX02B
+set_location_assignment PIN_AB17 -to HEX03B
+set_location_assignment PIN_AB15 -to HEX04B
+set_location_assignment PIN_AA15 -to HEX05B
+set_location_assignment PIN_AC17 -to HEX06B
+set_location_assignment PIN_AD17 -to HEX10B
+set_location_assignment PIN_AE17 -to HEX11B
+set_location_assignment PIN_AG17 -to HEX12B
+set_location_assignment PIN_AH17 -to HEX13B
+set_location_assignment PIN_AF17 -to HEX14B
+set_location_assignment PIN_AG18 -to HEX15B
+set_location_assignment PIN_AA14 -to HEX16B
+set_global_assignment -name BDF_FILE somador_ula_completo.bdf
+set_global_assignment -name BDF_FILE decodificador_final.bdf
+set_global_assignment -name BDF_FILE conversor_saida.bdf
+set_global_assignment -name BDF_FILE complemento.bdf
+set_global_assignment -name BDF_FILE comparador_completo.bdf
+set_global_assignment -name BDF_FILE comp_magnitude_4bits.bdf
+set_global_assignment -name BDF_FILE comp_1bit.bdf
+set_global_assignment -name BDF_FILE CircuitoGeral2.bdf
+set_global_assignment -name BDF_FILE bloco_logico.bdf
+set_global_assignment -name BDF_FILE ULA_Principal.bdf
+set_global_assignment -name BDF_FILE somador_completo_1bit.bdf
+set_global_assignment -name BDF_FILE somador_5bits.bdf
+set_global_assignment -name BDF_FILE mux_8x1_1bit.bdf
+set_global_assignment -name BDF_FILE geral.bdf
+set_global_assignment -name BDF_FILE conversor_complemento.bdf
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

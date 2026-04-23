@@ -22,7 +22,11 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 256 176 272)
+=======
 	(rect -136 224 32 240)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "A0" (rect 5 0 17 12)(font "Arial" ))
 	(pt 168 8)
@@ -38,7 +42,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 272 176 288)
+=======
 	(rect -136 256 32 272)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "A1" (rect 5 0 17 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -54,7 +62,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 288 176 304)
+=======
 	(rect -136 288 32 304)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "A2" (rect 5 0 17 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -70,7 +82,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 304 176 320)
+=======
 	(rect -136 320 32 336)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "A3" (rect 5 0 17 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -86,7 +102,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 464 176 480)
+=======
 	(rect -136 440 32 456)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "B0" (rect 5 0 17 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -102,7 +122,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 480 176 496)
+=======
 	(rect -136 472 32 488)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "B1" (rect 5 0 17 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -118,7 +142,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 496 176 512)
+=======
 	(rect -136 504 32 520)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "B2" (rect 5 0 17 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -134,7 +162,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 512 176 528)
+=======
 	(rect -136 536 32 552)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "B3" (rect 5 0 17 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -150,7 +182,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 320 176 336)
+=======
 	(rect -136 352 32 368)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "A5" (rect 5 0 17 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -166,7 +202,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+<<<<<<< HEAD
+	(rect 8 528 176 544)
+=======
 	(rect -136 568 32 584)
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "B5" (rect 5 0 17 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -920,6 +960,8 @@ https://fpgasoftware.intel.com/eula.
 	(rotate270)
 )
 (connector
+<<<<<<< HEAD
+=======
 	(pt 32 232)
 	(pt 168 232)
 )
@@ -1028,6 +1070,7 @@ https://fpgasoftware.intel.com/eula.
 	(pt 48 544)
 )
 (connector
+>>>>>>> ab0596828131c8fc03ce736b2ade27bcb0a0979b
 	(pt 656 448)
 	(pt 528 448)
 )
